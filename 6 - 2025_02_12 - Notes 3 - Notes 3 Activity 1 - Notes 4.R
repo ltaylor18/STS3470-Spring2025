@@ -79,7 +79,7 @@ bison <- read_excel("~/STS 347/0_Spring 2025/Old Data/Lesson 3 - bison.xlsx")
 names(bison)
 
 names(bison) <- c("year","nhscr", "chscr", "pdsi", "sweaccNH", "sweaccCH", "bisonNH", "bisonCH", "elk")
-
+39
 summary(bison)
 summary(bison$elk)
 mean(bison$elk)
