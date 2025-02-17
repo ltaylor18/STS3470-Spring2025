@@ -1,5 +1,5 @@
 # 2/19/2025
-# Lesson 4 Activity 2
+# Lesson 4 Activity 3
 # Lesson 5
 # Lesson 5 - Activity 1
 
@@ -10,7 +10,7 @@ library(tidyverse)
 #---------------------------------------------------------
 
 #---------------------------------------------------------
-#Lesson 4 - Activity 2
+#Lesson 4 - Activity 3
 
 #1
 head(diamonds)
