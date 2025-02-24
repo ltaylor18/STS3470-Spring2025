@@ -76,23 +76,23 @@ ggplot(out.x,aes(x=myx,y=after_stat(density))) +
 
 
 #8
-#True?/False? A histogram of densities of a data set will have 
+#True A histogram of densities of a data set will have 
 #different bar heights based on the number of bins we use.
 
 
 #9
-#True?/False? A histogram of densities of a data set will be 
+#True A histogram of densities of a data set will be 
 #proportional to a frequency histogram of the same data set 
 #(assuming bin widths are the same between the two histograms).
 
 
 #10
-#True?/False? The sum of all of the proportions will equal 1 
+#True The sum of all of the proportions will equal 1 
 #regardless of bin size.
 
 
 #11
-#True?/False? The sum of all of the densities will equal 1 
+#False The sum of all of the densities will equal 1 
 #regardless of bin size.
 
 
