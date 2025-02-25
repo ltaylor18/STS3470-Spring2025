@@ -63,3 +63,76 @@ mycis
 mysequence <- seq(100,2,-2)
 for(i in mysequence){print(i/2)}
 
+
+
+
+
+
+
+
+
+print("Do not look ahead!!!!!!!!!!!!!!!!!!!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+print("I really mean it. No peeking!!!!!!!!!!!!!!!!!!!!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# -----------------------------------------------------------
+# Lesson 9 - Activity 3 Reference Code
+# Do not use this until you have attempted first!
+
+# n <- 10 #update for #7, 10, 11
+# CIcapture <- NULL
+# mypower <- NULL
+# mytypeII <- NULL
+# index <- c(1, 3, 5, 6, 8, 9, 11, 13)
+# for(k in index){
+#   out <- NULL
+#   pvalsim <- NULL
+#   CIsim <- matrix(NA,nrow=1000,2)
+#   for(i in 1:1000){
+#     out <- sample(boxhouses$rooms, n, replace=FALSE)
+#     out2 <- t.test(out,mu=k)
+#     pvalsim[i] <- out2$p.value
+#     CIsim[i,] <- out2$conf.int
+#   }
+#   print(k)
+#   print("Power")
+#   mypower <- sum(pvalsim <= 0.05)/1000
+#   print(mypower)
+#   print("Type II Error")
+#   mytypeII <- 1-(sum(pvalsim <= 0.05)/1000)
+#   print(mytypeII)
+#   
+#   print("Capture Rate")
+#   CIcapture <- sum(CIsim[,1] <= 7.42 & CIsim[,2] >= 7.42)/1000
+#   print(CIcapture)
+#   
+# }
