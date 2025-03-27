@@ -23,7 +23,7 @@ out.5 <- data.frame(mean.5=mean.5)
 B <- ggplot(out.5,aes(x=mean.5))+
   geom_histogram(aes(y=after_stat(density)), color="white", bins=50) +     
   labs(y="density", title="Mean of samples of size 5")+
-  stat_function(fun=dnorm, args=list(mean=100,sd=25/sqrt(5)), size=1.5, color="red")+
+  stat_function(fun=dnorm, args=list(mean=100,sd=25/sqrt(5)), linewidth=1.5, color="red")+
   xlim(c(0,200))
 B
 
@@ -33,7 +33,7 @@ out.20 <- data.frame(mean.20=mean.20)
 C <- ggplot(out.20,aes(x=mean.20))+
   geom_histogram(aes(y=after_stat(density)), color="white", bins=75) +
   labs(title="Mean of samples of size 20")+
-  stat_function(fun=dnorm, =list(mean=100,sd=25/sqrt(20)), size=1.5, color="red")+
+  stat_function(fun=dnorm, args=list(mean=100,sd=25/sqrt(20)), linewidth=1.5, color="red")+
   xlim(c(0,200))
 C
 
@@ -43,7 +43,7 @@ out.100 <- data.frame(mean.100=mean.100)
 D <- ggplot(out.100,aes(x=mean.100))+
   geom_histogram(aes(y=after_stat(density)), color="white",bins=100) +
   labs(title="Mean of samples of size 100")+
-  stat_function(fun=dnorm, args=list(mean=100,sd=25/sqrt(100)), size=1.5, color="red")+
+  stat_function(fun=dnorm, args=list(mean=100,sd=25/sqrt(100)), linewidth=1.5, color="red")+
   xlim(c(0,200))
 D
 
