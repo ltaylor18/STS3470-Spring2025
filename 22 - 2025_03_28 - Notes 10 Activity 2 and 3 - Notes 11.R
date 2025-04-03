@@ -6,22 +6,23 @@
 
 #----------------------------------------------------
 
+# Updated Notes 10 - Activity 2!
+library(tidyverse)
+
 library(readxl)
-boxhouses <- read_excel("~/STS 347/0_Spring 2025/New Data/Box houses.xlsx")
-
-#------------------------------------------------------
-# Lesson 10 - Activity 1 Part 2
-
-#Type I Error Code:
-out <- replicate(5000,t.test(sample(boxhouses$rooms,10,replace=FALSE),mu=7.42,alternative="two.sided")$p.value)
-sum(out <= 0.05)/5000
+CLTwait <- read_excel("~/STS 347/0_Spring 2025/New Data/CLT CBP Wait times.xlsx")
+truemean <- mean(CLTwait$TotalPassengerCount)
+truemean
+hist(CLTwait$TotalPassengerCount)
 
 #1
 TypeISim <- function(n=10){
-  out <- replicate(5000,t.test(sample(boxhouses$rooms,n,replace=FALSE),mu=7.42,alternative="two.sided")$p.value)
-  prop <- sum(out <= 0.05)/5000
-  prop
+  out <- replicate(1000,t.test(sample(CLTwait$TotalPassengerCount,n,replace=TRUE),mu=truemean)$p.value)
+  prop <- sum(out <= 0.05)/1000
+  return(prop)
 }
+
+TypeISim()
 
 #2
 TypeISim(n=15)
@@ -31,15 +32,15 @@ set.seed(2320)
 TypeISim(n=15)
 
 #4
-set.seed(6493)
+set.seed(1001)
 
 #5
-myn <- 7:30
+myn <- seq(30,150,5)
 myresults <- rep(NA,length(myn))
 
 #6
 for(i in myn){
-  myresults[i - 6] <- TypeISim(n = i)
+  myresults[i/5 - 5] <- TypeISim(n = i)
 }
 
 #7
@@ -48,18 +49,20 @@ for(i in myn){
 #8
 TypeISimResults <- data.frame(myn=myn, myresults=myresults)
 TypeISimResults
+mean(TypeISimResults$myresults)
 
 #9
 library(tidyverse)
 ggplot(TypeISimResults,aes(x=myn,y=myresults)) + 
   geom_point() +
   geom_line() +
-  labs(x="Sample Size", y="Type I Error Rate")
-
-#Due to the very finite popluation (N=100), there is an unusual pattern.
-#The Type I Error rate should not be related to the sample size!
+  labs(x="Sample Size", y="Type I Error Rate") +
+  geom_hline(yintercept=0.05,color="red")
 
 mean(TypeISimResults$myresults)
+
+# Regardless of sample size, the type I error rate remains around the
+# nominal value of 0.05!
 
 
 
