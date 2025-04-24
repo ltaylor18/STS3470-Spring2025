@@ -142,8 +142,8 @@ ggplot(mypowerdata,aes(x=mudiffseq)) +
   geom_line(aes(y=powerEqual)) +
   geom_point(aes(y=powerUnequal),color="red") +
   geom_line(aes(y=powerUnequal),color="red",linetype=2) +
-  labs(title="When the Equal Variance assumption is not met (Pooled is correct test)",
-       subtitle="Satterthwaite = Black/Solid, Pooled = Red/Dashed",
+  labs(title="When the Equal Variance assumption is not met (Satterthwaite is correct test)",
+       subtitle="Pooled = Black/Solid, Satterthwaite = Red/Dashed",
        y="Power of Test")
 
 
