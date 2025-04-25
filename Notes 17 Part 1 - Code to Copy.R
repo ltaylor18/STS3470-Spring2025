@@ -147,6 +147,17 @@ ggplot(mypowerdata,aes(x=mudiffseq)) +
        y="Power of Test")
 
 
+#6 Extension
+# Repeat with n1=n2=30
+
+
+# Repeat with n1=n2=10
+
+
+# Repeat with n1=10 and n2=30
+
+
+
 
 
 #-----------------------------------------------------
