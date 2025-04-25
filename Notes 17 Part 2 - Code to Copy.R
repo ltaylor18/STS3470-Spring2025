@@ -132,7 +132,7 @@ mytypeI <- data.frame(TypeIW, TypeIAC, propseq)
 ggplot(mytypeI,aes(x=propseq)) +
   geom_line(aes(y=TypeIAC)) +
   geom_line(aes(y=TypeIW),color="red",linetype=2) +
-  labs(title="Type I Error Rate for Wald vs. Agrest-Coull Intervals (n=10)",
+  labs(title="Type I Error Rate for Wald vs. Agresti-Coull Intervals (n=10)",
        subtitle="Wald = Red/Dashed, Agresti-Coull = Black/Solid",
        x="True Proportion",
        y="Type I Error Rate")
