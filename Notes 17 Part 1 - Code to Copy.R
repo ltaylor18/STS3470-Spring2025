@@ -158,6 +158,13 @@ ggplot(mypowerdata,aes(x=mudiffseq)) +
 
 
 
+#7 Repeat #6 with sdiff=0 to make the pooled test the correct test
+
+
+
+
+
+
 
 
 #-----------------------------------------------------
